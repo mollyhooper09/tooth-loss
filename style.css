@@ -1,24 +1,10 @@
-@media screen and (min-width:0px) and (max-width:500px) {
-  body{
-  .container{
-	position: fixed;
-	left: 0;
-	width: 100%;
-	display: flex;
-	justify-content: left;}
-  }
-  }
-}
-
-@media screen and (max-width:501px){
-   body{
-  .container{
+.container{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
 	display: flex;
-	justify-content: center;}
-
+  justify-content: center;
+}
 
 #tooth1{
 	background-color: transparent;
