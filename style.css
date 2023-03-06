@@ -9,7 +9,6 @@
 #tooth1{
 	background-color: transparent;
 	border: transparent;
-  
 }
 
 #tooth2{
@@ -29,4 +28,11 @@
 #tooth5{
 	background-color: transparent;
 	border: transparent;
+}
+
+#linkTooth{
+  background-color: transparent;
+	border: transparent;
+  z-index:10;
+  width:100;
 }
