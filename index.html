@@ -10,14 +10,14 @@
 <body>
 <a-scene>
   <a-assets>
-    <img id="linkTooth" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318" width="100" height="100">
+    <img id="Tooth" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318" width="100" height="100">
     <img id="mouth"  src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/editedmouth.jpg?v=1678037131813">
   </a-assets>
 
   <!-- Using the asset management system. -->
   <a-sky src="#mouth"></a-sky>  
   
-  <a-image navigate-on-click="url: https://mollyhooper09.github.io/ToothlossVideos2/" id="linkTooth" src="linkTooth"
+  <a-image navigate-on-click="url: https://mollyhooper09.github.io/ToothlossVideos2/" id="linkTooth" src="#Tooth"></a-image>
   </a-scene>
   
   <audio id="grinding">
@@ -133,7 +133,7 @@
   
   AFRAME.registerComponent('navigate-on-click', {
     schema: {
-      url: {default: ''}
+      url: {default: 'url: https://mollyhooper09.github.io/ToothlossVideos2/'}
     },
 
     init: function () {
