@@ -59,12 +59,11 @@
   <button type="button" class="btn btn-primary" id="tooth4" onclick="playPause4()"><img id="decay-4" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-4bw.png?v=1677763641380" width="100" height="100"></button>
 
   <button type="button" class="btn btn-primary" id="tooth5" onclick="playPause5()"><img id="decay-5" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-5bw.png?v=1677763642247" width="100" height="100"></button>
+  
+  <button id="linkTooth" onclick="document.location='https://mollyhooper09.github.io/ToothlossVideos2/'"><img id="decay-6" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318" width="100" height="100"></button>
+    
   </div>
 </div>
-  
-  <button type="button" id="linkTooth" onclick="navigate-on-click()"><img id="decay6"
-    
-  </button>
 
 <script>
     function playPause() {
@@ -131,23 +130,7 @@
         $('.pause-btn').hide();
     }
 }
-  
 
-  AFRAME.registerComponent('navigate-on-click', {
-    schema: {
-      url: {default: 'url: https://mollyhooper09.github.io/ToothlossVideos2/'}
-    },
-
-    init: function () {
-      var data = this.data;
-      var el = this.el;
-
-      el.addEventListener('click', function () {
-        window.location.href = data.url;
-      });
-    }
-  });        
-  
 </script>
        
 

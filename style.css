@@ -35,7 +35,10 @@
 	border: transparent;
   z-index:10;
   width:100;
+  border-radius:50;
 }
+
+
 
 body{
   height:630px;
