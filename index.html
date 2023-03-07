@@ -8,16 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  
 <a-scene>
   <a-assets>
+    <img id="linkTooth" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318" width="100" height="100">
     <img id="mouth"  src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/editedmouth.jpg?v=1678037131813">
   </a-assets>
 
   <!-- Using the asset management system. -->
   <a-sky src="#mouth"></a-sky>  
-  </a-scene>
   
+  <a-image navigate-on-click="url: https://mollyhooper09.github.io/ToothlossVideos2/" id="linkTooth" src="linkTooth"
+  </a-scene>
   
   <audio id="grinding">
   <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/grinding.mp3?v=1678144423902" type="audio/ogg">
@@ -48,9 +49,6 @@
   <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/rotting.mp3?v=1678144426447" type="audio/mpeg">
   Your browser does not support the audio element.
   </audio>
-<div>
-<button type="button" id="linkTooth" onclick="https://mollyhooper09.github.io/ToothlossVideos2/"><img id="linkingtootg" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318" width="80" height="100"></button>
-</div>
   
   <div class="container">
 
@@ -132,6 +130,22 @@
         $('.pause-btn').hide();
     }
 }
+  
+  AFRAME.registerComponent('navigate-on-click', {
+    schema: {
+      url: {default: ''}
+    },
+
+    init: function () {
+      var data = this.data;
+      var el = this.el;
+
+      el.addEventListener('click', function () {
+        window.location.href = data.url;
+      });
+    }
+  });        
+  
 </script>
        
 
