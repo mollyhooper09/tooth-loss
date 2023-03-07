@@ -10,15 +10,13 @@
 <body>
 <a-scene>
   <a-assets>
-    <img id="Tooth" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318" width="100" height="100">
-    <img id="mouth"  src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/editedmouth.jpg?v=1678037131813">
+   <img id="mouth"  src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/editedmouth.jpg?v=1678037131813">
   </a-assets>
 
   <!-- Using the asset management system. -->
   <a-sky src="#mouth"></a-sky>  
   
-  <a-image navigate-on-click="url: https://mollyhooper09.github.io/ToothlossVideos2/" id="linkTooth" src="#Tooth"></a-image>
-  </a-scene>
+ </a-scene>
   
   <audio id="grinding">
   <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/grinding.mp3?v=1678144423902" type="audio/ogg">
@@ -51,7 +49,6 @@
   </audio>
   
   <div class="container">
-
   <div class="btn-group">
   <button type="button" class="btn btn-primary" id="tooth1" onclick="playPause()"><img id="decay-1" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-1bw.png?v=1677763339907" width="100" height="100"></button>
 
@@ -64,6 +61,10 @@
   <button type="button" class="btn btn-primary" id="tooth5" onclick="playPause5()"><img id="decay-5" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-5bw.png?v=1677763642247" width="100" height="100"></button>
   </div>
 </div>
+  
+  <button type="button" id="linkTooth" onclick="navigate-on-click()"><img id="decay6"
+    
+  </button>
 
 <script>
     function playPause() {
@@ -131,6 +132,7 @@
     }
 }
   
+
   AFRAME.registerComponent('navigate-on-click', {
     schema: {
       url: {default: 'url: https://mollyhooper09.github.io/ToothlossVideos2/'}
