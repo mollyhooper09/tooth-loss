@@ -9,6 +9,7 @@
 </head>
 <body>
 <a-scene>
+  
   <a-assets>
    <img id="mouth"  src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/editedmouth.jpg?v=1678037131813">
   </a-assets>
@@ -66,6 +67,17 @@
 </div>
 
 <script>
+  AFRAME.registerComponent('hide-on-enter-vr-click', {
+      schema: {type: 'selector'},
+
+      init: function () {
+        var element = this.data;
+        var button = this.el.querySelector('.a-enter-vr-button');
+        button.addEventListener('click', function () {
+          element.style.opacity = 0;
+        });
+      }
+    });
     function playPause() {
     var audio = document.getElementById('grinding');
     if (audio.paused) {

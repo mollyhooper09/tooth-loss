@@ -58,3 +58,7 @@ body{
 .noSelect:focus {
     outline: none !important;
 }
+
+.a-enter-vr-button {
+  display: none;
+}
