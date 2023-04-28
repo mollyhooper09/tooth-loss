@@ -1,150 +1,252 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-	<title>buttongroup</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-<a-scene>
-  
-  <a-assets>
-   <img id="mouth"  src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/mouthwithtypeFINAL.jpg?v=1681912825045">
-  </a-assets>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+    <title>buttongroup</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img
+          id="mouth"
+          src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/mouthwithtypeFINAL.jpg?v=1681912825045"
+        />
+        <source
+          src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/mouthwithtypeFINAL.jpg?v=1681912825045"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </a-assets>
 
-  <!-- Using the asset management system. -->
-  <a-sky src="#mouth"></a-sky>  
-  
- </a-scene>
-  
-  <audio id="grinding">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/grinding.mp3?v=1678144423902" type="audio/ogg">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/grinding.mp3?v=1678144423902" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
+      <!-- Using the asset management system. -->
+      <a-sky src="#mouth"></a-sky>
+    </a-scene>
 
-<audio id="romance">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/romance.mp3?v=1678144425170" type="audio/ogg">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/romance.mp3?v=1678144425170" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
+    <audio id="grinding">
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/grinding.mp3?v=1678144423902"
+        type="audio/ogg"
+      />
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/grinding.mp3?v=1678144423902"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
 
-<audio id="dentist extraction">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/dentist%20extraction.mp3?v=1678144422463" type="audio/ogg">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/dentist%20extraction.mp3?v=1678144422463" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
+    <audio id="romance">
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/romance.mp3?v=1678144425170"
+        type="audio/ogg"
+      />
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/romance.mp3?v=1678144425170"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
 
-<audio id="sporting injury">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/sporting%20injury.mp3?v=1678144427562" type="audio/ogg">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/sporting%20injury.mp3?v=1678144427562" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
+    <audio id="dentist extraction">
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/dentist%20extraction.mp3?v=1678144422463"
+        type="audio/ogg"
+      />
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/dentist%20extraction.mp3?v=1678144422463"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
 
-<audio id="rotting">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/rotting.mp3?v=1678144426447" type="audio/ogg">
-  <source src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/rotting.mp3?v=1678144426447" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
-  
-  <div class="container">
-  <div class="noSelect">
-  <button type="button" class="btn btn-primary" id="tooth1" onclick="playPause()"><img id="decay-1" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-1bw.png?v=1677763339907" width="100" height="100"></button>
+    <audio id="sporting injury">
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/sporting%20injury.mp3?v=1678144427562"
+        type="audio/ogg"
+      />
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/sporting%20injury.mp3?v=1678144427562"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
 
-  <button type="button" class="btn btn-primary" id="tooth2" onclick="playPause2()"><img id="decay-2" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-2bw.png?v=1677763639623" width="100" height="100"></button>
+    <audio id="rotting">
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/rotting.mp3?v=1678144426447"
+        type="audio/ogg"
+      />
+      <source
+        src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/rotting.mp3?v=1678144426447"
+        type="audio/mpeg"
+      />
+      Your browser does not support the audio element.
+    </audio>
 
-  <button type="button" class="btn btn-primary" id="tooth3" onclick="playPause3()"><img id="decay-3" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-3bw.png?v=1677763640390" width="100" height="100"></button>
+    <div class="container">
+      <div class="noSelect">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="tooth1"
+          onclick="playPause()"
+        >
+          <img
+            id="decay-1"
+            src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-1bw.png?v=1677763339907"
+            width="100"
+            height="100"
+          />
+        </button>
 
-  <button type="button" class="btn btn-primary" id="tooth4" onclick="playPause4()"><img id="decay-4" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-4bw.png?v=1677763641380" width="100" height="100"></button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="tooth2"
+          onclick="playPause2()"
+        >
+          <img
+            id="decay-2"
+            src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-2bw.png?v=1677763639623"
+            width="100"
+            height="100"
+          />
+        </button>
 
-  <button type="button" class="btn btn-primary" id="tooth5" onclick="playPause5()"><img id="decay-5" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-5bw.png?v=1677763642247" width="100" height="100"></button>
-  
-  <button id="linkTooth" onclick="document.location='https://mollyhooper09.github.io/Toothloss-Videos/'"><img id="decay-6" src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318" width="100" height="100"></button>
-    
-  </div>
-</div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="tooth3"
+          onclick="playPause3()"
+        >
+          <img
+            id="decay-3"
+            src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-3bw.png?v=1677763640390"
+            width="100"
+            height="100"
+          />
+        </button>
 
-<script>
-  AFRAME.registerComponent('hide-on-enter-vr-click', {
-      schema: {type: 'selector'},
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="tooth4"
+          onclick="playPause4()"
+        >
+          <img
+            id="decay-4"
+            src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-4bw.png?v=1677763641380"
+            width="100"
+            height="100"
+          />
+        </button>
 
-      init: function () {
-        var element = this.data;
-        var button = this.el.querySelector('.a-enter-vr-button');
-        button.addEventListener('click', function () {
-          element.style.opacity = 0;
-        });
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="tooth5"
+          onclick="playPause5()"
+        >
+          <img
+            id="decay-5"
+            src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/decay-5bw.png?v=1677763642247"
+            width="100"
+            height="100"
+          />
+        </button>
+
+        <button
+          id="linkTooth"
+          onclick="document.location='https://mollyhooper09.github.io/Toothloss-Videos/'"
+        >
+          <img
+            id="decay-6"
+            src="https://cdn.glitch.global/b68df10d-c676-4004-a66f-93c0b0a43a5c/linktooth.png?v=1678144439318"
+            width="100"
+            height="100"
+          />
+        </button>
+      </div>
+    </div>
+
+    <script>
+      AFRAME.registerComponent("hide-on-enter-vr-click", {
+        schema: { type: "selector" },
+
+        init: function () {
+          var element = this.data;
+          var button = this.el.querySelector(".a-enter-vr-button");
+          button.addEventListener("click", function () {
+            element.style.opacity = 0;
+          });
+        },
+      });
+      function playPause() {
+        var audio = document.getElementById("grinding");
+        if (audio.paused) {
+          audio.play();
+          $(".pause-btn").show();
+          $(".play-btn").hide();
+        } else {
+          audio.pause();
+          $(".play-btn").show();
+          $(".pause-btn").hide();
+        }
       }
-    });
-    function playPause() {
-    var audio = document.getElementById('grinding');
-    if (audio.paused) {
-        audio.play(); 
-        $('.pause-btn').show();
-        $('.play-btn').hide();
-    } else {
-        audio.pause(); 
-        $('.play-btn').show();
-        $('.pause-btn').hide();
-    }
-}
 
-    function playPause2() {
-    var audio = document.getElementById('romance');
-    if (audio.paused) {
-        audio.play(); 
-        $('.pause-btn').show();
-        $('.play-btn').hide();
-    } else {
-        audio.pause(); 
-        $('.play-btn').show();
-        $('.pause-btn').hide();
-    }
-}
+      function playPause2() {
+        var audio = document.getElementById("romance");
+        if (audio.paused) {
+          audio.play();
+          $(".pause-btn").show();
+          $(".play-btn").hide();
+        } else {
+          audio.pause();
+          $(".play-btn").show();
+          $(".pause-btn").hide();
+        }
+      }
 
-   function playPause3() {
-    var audio = document.getElementById('dentist extraction');
-    if (audio.paused) {
-        audio.play(); 
-        $('.pause-btn').show();
-        $('.play-btn').hide();
-    } else {
-        audio.pause(); 
-        $('.play-btn').show();
-        $('.pause-btn').hide();
-    }
-}
-   
-   function playPause4() {
-    var audio = document.getElementById('sporting injury');
-    if (audio.paused) {
-        audio.play(); 
-        $('.pause-btn').show();
-        $('.play-btn').hide();
-    } else {
-        audio.pause(); 
-        $('.play-btn').show();
-        $('.pause-btn').hide();
-    }
-}
-   
-   function playPause5() {
-    var audio = document.getElementById('rotting');
-    if (audio.paused) {
-        audio.play(); 
-        $('.pause-btn').show();
-        $('.play-btn').hide();
-    } else {
-        audio.pause(); 
-        $('.play-btn').show();
-        $('.pause-btn').hide();
-    }
-}
+      function playPause3() {
+        var audio = document.getElementById("dentist extraction");
+        if (audio.paused) {
+          audio.play();
+          $(".pause-btn").show();
+          $(".play-btn").hide();
+        } else {
+          audio.pause();
+          $(".play-btn").show();
+          $(".pause-btn").hide();
+        }
+      }
 
-</script>
-       
+      function playPause4() {
+        var audio = document.getElementById("sporting injury");
+        if (audio.paused) {
+          audio.play();
+          $(".pause-btn").show();
+          $(".play-btn").hide();
+        } else {
+          audio.pause();
+          $(".play-btn").show();
+          $(".pause-btn").hide();
+        }
+      }
 
-</body>
+      function playPause5() {
+        var audio = document.getElementById("rotting");
+        if (audio.paused) {
+          audio.play();
+          $(".pause-btn").show();
+          $(".play-btn").hide();
+        } else {
+          audio.pause();
+          $(".play-btn").show();
+          $(".pause-btn").hide();
+        }
+      }
+    </script>
+  </body>
 </html>
